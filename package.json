@@ -1,5 +1,6 @@
 {
   "name": "iron-peak-circle",
+  "version": "1.0.0",
   "description": "Portfolio gym marketing website built with React, Tailwind CSS, TanStack Router, and Vite.",
   "private": true,
   "sideEffects": false,
