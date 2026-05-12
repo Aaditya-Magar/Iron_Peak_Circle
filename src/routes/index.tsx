@@ -47,7 +47,7 @@ function Hero() {
   const lines = ["FORGE", "YOUR", "LIMITS", "EVERY", "DAY."];
 
   return (
-    <section ref={ref} className="relative h-screen min-h-[760px] w-full overflow-hidden grain bg-black">
+    <section ref={ref} className="relative h-screen min-h-[720px] w-full overflow-hidden grain bg-black">
       <motion.div style={{ y }} className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80"
@@ -61,18 +61,18 @@ function Hero() {
       {/* Particles */}
       <Particles />
 
-      <motion.div style={{ opacity }} className="relative z-10 max-w-7xl mx-auto px-5 lg:px-10 h-full flex items-center">
+      <motion.div style={{ opacity }} className="relative z-10 max-w-7xl mx-auto px-5 pt-20 lg:px-10 h-full flex items-center">
         <div className="grid lg:grid-cols-2 gap-10 w-full items-center">
           <div>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="font-condensed uppercase tracking-[0.4em] text-[#E8192C] text-xs sm:text-sm mb-6"
+              className="font-condensed uppercase tracking-[0.4em] text-[#E8192C] text-xs sm:text-sm mb-5"
             >
               ◆ Mumbai's #1 Premium Gym
             </motion.p>
-            <h1 className="font-display leading-[0.85] text-[16vw] sm:text-[12vw] lg:text-[8.5rem] xl:text-[10rem] text-white mb-6">
+            <h1 className="m-0 font-display font-bold uppercase leading-[0.86] text-[15vw] sm:text-[11vw] lg:text-[7rem] xl:text-[8.1rem] text-white mb-6">
               {lines.slice(0, 3).map((l, i) => (
                 <motion.span
                   key={l}

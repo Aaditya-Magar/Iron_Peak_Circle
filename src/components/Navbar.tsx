@@ -40,25 +40,30 @@ export default function Navbar() {
           scrolled ? "bg-black/95 border-b border-[#E8192C]/60 backdrop-blur" : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 lg:px-10 h-20 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group">
+        <div className="max-w-7xl mx-auto px-5 lg:px-10 h-20 flex items-center justify-between gap-5">
+          <Link to="/" className="flex shrink-0 items-center gap-2 group lg:w-[248px] xl:w-[258px]">
             <span className="grid place-items-center h-9 w-9 rounded-sm bg-[#E8192C] text-white">
               <Flame size={20} strokeWidth={2.5} />
             </span>
-            <span className="font-display text-3xl tracking-wider leading-none">
-              <span className="text-[#E8192C]">IRON</span>
-              <span className="text-white">PEAK</span>
+            <span className="min-w-0 leading-none">
+              <span className="block font-display text-[1.65rem] tracking-[0.08em] leading-none sm:text-3xl">
+                <span className="text-[#E8192C]">IRON</span>
+                <span className="text-white">PEAK</span>
+              </span>
+              <span className="mt-1 block whitespace-nowrap font-condensed text-[9px] uppercase tracking-[0.34em] text-[#E8192C] xl:text-[10px] xl:tracking-[0.38em]">
+                Mumbai's #1 Premium Gym
+              </span>
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex min-w-0 flex-1 items-center justify-center gap-0">
             {NAV.slice(0, 7).map((n) => {
               const active = pathname === n.to;
               return (
                 <Link
                   key={n.to}
                   to={n.to}
-                  className="relative px-4 py-2 font-condensed font-semibold text-sm uppercase tracking-widest text-white/80 hover:text-white transition-colors"
+                  className="relative px-3 py-2 font-condensed font-semibold text-sm uppercase tracking-widest text-white/80 hover:text-white transition-colors xl:px-4"
                 >
                   {n.label}
                   {active && (
